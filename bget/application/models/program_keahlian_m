@@ -1,0 +1,29 @@
+<?php 
+class Program_keahlian_m extends CI_Model{
+	private $idpk;
+	private $namapk;
+	
+	public function setIdpk($value){
+		$this->idPK = $value;
+	}
+	
+	public function setNamapk($value){
+		$this->namapk = $value;
+	}
+	
+	public function getIdpk(){
+		return $this->idpk;
+	}
+	
+	public function getNamapk(){
+		return $this->namapk;
+	}
+	
+	public function view(){
+		$query = "SELECT * FROM tbl_pk";
+		return $this->db->query($query);
+	
+	}
+	
+}
+?>
